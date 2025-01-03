@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET">
+        {% csrf_token %}
+        <input type="text" name="qno" value="{{question.qno}}" readonly>
+        <input type="text" name="qtext" value="{{question.qtext}}" readonly>
+        <input type="hidden" name="answer" value="{{question.answer}}" readonly>
+        <input type="radio" name="op" value="{{question.op1}}"><span style="color: red;">{{question.op1}}</span>
+        <input type="radio" name="op" value="{{question.op2}}"><span style="color: red;">{{question.op2}}</span>
+        <input type="radio" name="op" value="{{question.op3}}"><span style="color: red;">{{question.op3}}</span>
+        <input type="radio" name="op" value="{{question.op4}}"><span style="color: red;">{{question.op4}}</span>
+        <input type="hidden" type="text" name="subject" value="{{question.subject}}">
+        <input type="submit" value="next" formaction="/loginapp/nextQuestion/">
+        <input type="submit" value="previous" formaction="/loginapp/previousQuestion/">
+        <input type="submit" value="end-exam" formaction="/loginapp/endExam/" >
+
+    </form>
+    
+</body>
+</html>
