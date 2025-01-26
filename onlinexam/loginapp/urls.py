@@ -6,6 +6,7 @@ urlpatterns=[
     path('login/',views.login),
     path('nextQuestion/',views.nextQuestion),
     path('previousQuestion/',views.previousQuestion),
-    path('endExam/',views.endExam)
+    path('endExam/',views.endExam),
+    path('startTest/',views.startTest)
 
 ]
